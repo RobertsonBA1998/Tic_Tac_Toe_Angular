@@ -18,6 +18,7 @@ export class GameBoardComponent {
   //create an array of nine boardCells to track data of players and gamestate
   boardCells: string[] = new Array(9).fill('');
 
+  //winnning conditions of the tic tac toe game
   //players occupies these spaces in their index, will be declared winners
   winningConditions: number[][] = [
     [0, 1, 2],
