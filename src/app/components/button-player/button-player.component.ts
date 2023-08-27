@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button-player.component.css'],
 })
 export class ButtonPlayerComponent {
-  //passing value from parent to children to determine X and O
+  //passing value from parent to children to determine X and O in the btn text
   @Input() value: string = '';
 
   //passing value from parent to children to determine disabled property true/false from btn

@@ -74,7 +74,7 @@ export class GameBoardComponent {
     }
   }
 
-  //function to determine where X and O go in their own index
+  //function to determine where X and O go in their own index aka their moves
   makeMove(index: number) {
     if (!this.gameDone && this.boardCells[index] === '') {
       //fill in array with current player
