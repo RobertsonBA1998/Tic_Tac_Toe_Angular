@@ -1,11 +1,15 @@
-<h1>Game Board</h1>
-<h2>{{ playersStatus }}</h2>
-
-<div class="board">
-  <app-button-player
-    *ngFor="let cell of boardCells; let index = index"
-    [value]="cell"
-    [disabled]="gameDone || cell !== ''"
-    (btnClicked)="makeMove(index)"
-  ></app-button-player>
+<div class="content">
+  <h1>Play a game of Tic-Tac-Toe!</h1>
+  <button class="refresh" (click)="refreshPage()">
+    Click here to Restart!
+  </button>
+  <h2>{{ playersStatus }}</h2>
+  <div class="board">
+    <app-button-player
+      *ngFor="let cell of boardCells; let index = index"
+      [value]="cell"
+      [disabled]="gameDone || cell !== ''"
+      (btnClicked)="makeMove(index)"
+    ></app-button-player>
+  </div>
 </div>

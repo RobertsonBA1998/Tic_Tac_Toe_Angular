@@ -10,7 +10,7 @@ export class GameBoardComponent {
   currentPlayer: string = 'X';
 
   //showcases players turn and gamestate after all index filled
-  playersStatus: string = '';
+  playersStatus: string = 'Click a tile to play!';
 
   //used to disable buttons when the game is finished
   gameDone: boolean = false;
@@ -87,5 +87,10 @@ export class GameBoardComponent {
     //run these functions to update/determine winner and player status
     this.playersStatusFunct();
     this.gamesWinner();
+  }
+
+  //refreshes page to restart game
+  refreshPage() {
+    window.location.reload();
   }
 }

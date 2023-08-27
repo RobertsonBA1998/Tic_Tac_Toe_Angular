@@ -1,10 +1,15 @@
 .cell-items {
-  width: 100px; /* Adjust the width of each grid item */
-  height: 100px; /* Adjust the height of each grid item */
-  background-color: lightgray; /* Set the background color */
-  border: 1px solid gray; /* Add borders for better visualization */
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.cell-items:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
