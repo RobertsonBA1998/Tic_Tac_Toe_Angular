@@ -1,6 +1,11 @@
 <h1>Game Board</h1>
+<h2>{{ playersStatus }}</h2>
+
 <div class="board">
-  <div *ngFor="let cell of boardCells" class="cell">
-    <app-button-player></app-button-player>
-  </div>
+  <app-button-player
+    *ngFor="let cell of boardCells; let index = index"
+    [value]="cell"
+    [disabled]="gameDone || cell !== ''"
+    (btnClicked)="makeMove(index)"
+  ></app-button-player>
 </div>
